@@ -11,8 +11,9 @@ class Video {
     return Video(
       id: json["id"]["videoId"],
       titulo: json["snippet"]["title"],
+      descricao: json["snippet"]["description"],
       imagem: json["snippet"]["thumbnails"]["high"]["url"],
-      canal: json["snippet"]["channelId"],
+      canal: json["snippet"]["channelTitle"],
     );
   }
 }
